@@ -784,7 +784,7 @@ body {
     scale: 0.85;
   }
 }
-@media (min-width: 75.06125em) and (max-height: 50.06125em) {
+@media (min-width: 75.06125em) and (max-height: 53.18625em) {
   .section-2 .section--main.--show {
     justify-content: flex-end;
   }
@@ -855,10 +855,10 @@ body {
     top: 30%;
   }
   .prediction {
-    transform: translate(-50%, 21%);
+    transform: translate(-50%, 28%);
   }
   .prediction__texts {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.25rem;
   }
   .section-3__title {
     font-size: 2.875rem;

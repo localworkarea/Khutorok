@@ -506,7 +506,7 @@
     @extend %center;
     overflow: hidden;
     &.--show {
-      @media (min-width:toEm(1200.98)) and (max-height: toEm(800.98)) {
+      @media (min-width:toEm(1200.98)) and (max-height: toEm(850.98)) {
         justify-content: flex-end;
       }
       @media (max-width:toEm($mobileSmall)){
@@ -643,7 +643,7 @@
     max-width: 950px;
     z-index: 2;
     @media (min-width:toEm($mobileSmall)){
-      transform: translate(-50%, 21%);
+      transform: translate(-50%, 28%);
     }
     @media (max-width: toEm(390.98)){
       transform: translate(-50%, -28%);
@@ -659,7 +659,7 @@
       margin-bottom: 15px;
       @include adaptiveValue("font-size", 44, 28);
       @media (min-width:toEm(480.98)){
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
       @media (min-width:toEm(380.98)){
         min-height: 176px;
