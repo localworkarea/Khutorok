@@ -380,13 +380,6 @@ body {
   justify-content: flex-end;
 }
 
-.section-0 .section--main .section--main__bg {
-  opacity: 0;
-}
-[data-fls-loaded] .section-0 .section--main .section--main__bg {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
 .section-0__wrapper {
   padding-top: 0rem;
   padding-bottom: 1.875rem;
@@ -394,21 +387,6 @@ body {
 .section-0__slider {
   overflow: visible;
   position: relative;
-}
-.section-0__slider-wrapper {
-  opacity: 0;
-}
-[data-fls-loaded] .section-0__slider-wrapper {
-  opacity: 1;
-  transition: opacity 0.65s ease 0.2s;
-}
-.section-0__footer {
-  opacity: 0;
-}
-[data-fls-loaded] .section-0__footer {
-  opacity: 1;
-  transition: opacity 0.8s ease;
-  transition-delay: 0.65s;
 }
 .section-0__footer {
   position: relative;
@@ -421,13 +399,6 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 2.5rem;
-}
-.section-0__button {
-  opacity: 0;
-}
-[data-fls-loaded] .section-0__button {
-  opacity: 1;
-  transition-delay: 0.5s;
 }
 .section-0__button {
   position: absolute;
