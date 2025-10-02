@@ -175,6 +175,10 @@
 .section-0 {
   .section--main {
     @extend %center;
+    [data-fls-loaded] & {
+      opacity: 1 !important;
+      transition: opacity .3s ease;
+    }
   }
 
   // .section-0__wrapper
@@ -278,7 +282,6 @@
     opacity: 0;
     [data-fls-loaded] & {
       opacity: 1;
-      transition: opacity .8s ease;
       transition-delay: 0.5s;
     }
 
