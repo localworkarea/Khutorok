@@ -1,0 +1,118 @@
+body {
+	.--fullpage-init & {
+		// Щоб вимкнути оновлення сторінки свайпом на телефоні
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+
+// Оболонка секцій
+[data-fls-fullpage] {
+	min-height: 100svh;
+	.--fullpage-init & {
+		// Для того щоб секції не перекривали буллети
+		z-index: 1;
+		// Відносно чого позиціонуються секції
+		touch-action: none;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+// Секція
+[data-fls-fullpage-section] {
+	.--fullpage-switching & {
+		touch-action: none;
+	}
+	.--fullpage-init & {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+
+	// Модифікації
+	.--fullpage-init .slider-mode &,
+	.--fullpage-init .cards-mode & {
+		transition: transform 0.7s cubic-bezier(0.55, 0.085, 0, 0.99) 0s;
+	}
+	.--fullpage-init .fade-mode & {
+		transition:
+			opacity 0.5s ease-in-out 0s,
+			visibility 0.5s ease-in-out 0s;
+	}
+}
+
+// Оболонка буллетів
+.--fullpage-bullets {
+	position: fixed;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 15px;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	gap: toRem(10);
+	// @media (max-width: $pc) {
+	// 	right: toRem(20);
+	// }
+	@media (min-width:toEm(1366.98)){
+		right: 40px; 
+	}
+	@media (min-width:toEm($mobileSmall)){
+		 right: 20px; 
+	}
+
+	@media (max-width:toEm(820.98)){
+		transition: opacity .3s ease;
+		.--fullpage-section-3 & {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	// Булет
+	& .--fullpage-bullet {
+		cursor: pointer;
+		width: 15px;
+		height: 15px;
+		flex: 0 0 15px;
+		border-radius: 25%;
+		border-radius: 50%;
+		background-color: #111C4E;
+		box-shadow:
+		0 0 15px #fff,
+			0 0 toRem(30) rgba(255, 255, 255, 0.8);
+		border: toRem(1) solid #111C4E;
+		// opacity: 0.6;
+		transition: all .45s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 1;
+			}
+		}
+		@media (any-hover: hover){
+			&:hover{
+				&:not(.--fullpage-bullet-active) {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	& .--fullpage-bullet-active {
+		opacity: 1;
+		background-color: #fff;
+		transform: scale(1.25);
+	}
+
+}
