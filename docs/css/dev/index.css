@@ -380,6 +380,9 @@ body {
   justify-content: flex-end;
 }
 
+.section-0 .section--main {
+  opacity: 0;
+}
 [data-fls-loaded] .section-0 .section--main {
   opacity: 1 !important;
   transition: opacity 0.3s ease;

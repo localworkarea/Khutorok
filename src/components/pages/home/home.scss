@@ -175,6 +175,7 @@
 .section-0 {
   .section--main {
     @extend %center;
+    opacity: 0;
     [data-fls-loaded] & {
       opacity: 1 !important;
       transition: opacity .3s ease;
