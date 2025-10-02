@@ -175,10 +175,12 @@
 .section-0 {
   .section--main {
     @extend %center;
-    opacity: 0;
-    [data-fls-loaded] & {
-      opacity: 1 !important;
-      transition: opacity .3s ease;
+    .section--main__bg {
+      opacity: 0;
+      [data-fls-loaded] & {
+        opacity: 1;
+        transition: opacity .3s ease;
+      }
     }
   }
 
@@ -212,7 +214,7 @@
     opacity: 0;
     [data-fls-loaded] & {
       opacity: 1;
-      transition: opacity .65s ease;
+      transition: opacity .65s ease .2s;
     }
   }
 

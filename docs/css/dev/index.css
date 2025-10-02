@@ -380,11 +380,11 @@ body {
   justify-content: flex-end;
 }
 
-.section-0 .section--main {
+.section-0 .section--main .section--main__bg {
   opacity: 0;
 }
-[data-fls-loaded] .section-0 .section--main {
-  opacity: 1 !important;
+[data-fls-loaded] .section-0 .section--main .section--main__bg {
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 .section-0__wrapper {
@@ -400,7 +400,7 @@ body {
 }
 [data-fls-loaded] .section-0__slider-wrapper {
   opacity: 1;
-  transition: opacity 0.65s ease;
+  transition: opacity 0.65s ease 0.2s;
 }
 .section-0__footer {
   opacity: 0;
