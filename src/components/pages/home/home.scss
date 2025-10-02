@@ -63,8 +63,11 @@
     opacity: 0;
     transition: opacity .45s ease;
 
+    @media (min-width:toEm($mobileSmall)){
+       opacity: 1; 
+    }
     .--fullpage-section-0 & {
-      opacity: 1;
+        opacity: 1;
     }
   }
 }

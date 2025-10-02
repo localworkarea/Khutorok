@@ -833,6 +833,9 @@ body {
   .logo {
     top: 1.25rem;
   }
+  .logo__ok {
+    opacity: 1;
+  }
   .section-3 .section--main, .section-2 .section--main, .section-1 .section--main, .section-0 .section--main {
     justify-content: center;
   }
