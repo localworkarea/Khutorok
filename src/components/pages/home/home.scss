@@ -600,6 +600,7 @@
     display: none;
 
     @include adaptiveValue("font-size", 26, 24);
+    font-weight: 700;
     text-align: center;
     margin-top: -15px;
     p {
@@ -637,6 +638,9 @@
       @include adaptiveValue("font-size", 44, 28);
       @media (min-width:toEm(480.98)){
         margin-bottom: 30px;
+      }
+      @media (min-width:toEm(380.98)){
+        min-height: 176px;
       }
       @media (max-width: toEm(380.98)){
         font-size: 24px !important;
@@ -703,10 +707,13 @@
 	}
 	// .section-3__title
 	&__title {
-    font-size: 46px;
     text-align: center;
     font-weight: 700;
     margin-bottom: 37px;
+    font-size: 9vw;
+    @media (min-width:toEm($mobileSmall)){
+      font-size: 46px;
+    }
   }
 	// .section-3__slider
 	&__slider {
