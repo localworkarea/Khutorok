@@ -559,6 +559,8 @@ body {
 }
 .section-2__notes {
   display: none;
+  position: relative;
+  z-index: 5;
 }
 .section-2__notes {
   font-weight: 700;
@@ -567,6 +569,7 @@ body {
 }
 .section-2__notes p .link {
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .prediction {
@@ -959,5 +962,8 @@ body {
   }
   .section-2__btn:hover {
     transform: translate(-50%, -0.1875rem);
+  }
+  .section-2__notes p .link:hover {
+    color: #fff;
   }
 }
